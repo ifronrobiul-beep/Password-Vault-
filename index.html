@@ -147,7 +147,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     // --- CONFIGURATION ---
-    const GOOGLE_CLIENT_ID = 'YOUR_CLIENT_ID_GOES_HERE'; // <-- PASTE YOUR CLIENT ID HERE
+    const GOOGLE_CLIENT_ID = 'add this google drive _CLIENT_ID_ 419426378293-661bn0b9il4bvk6k3tdr30tdhbhko0tj.apps.googleusercontent.com'; // <-- PASTE YOUR CLIENT ID HERE
     const DRIVE_SCOPES = 'https://www.googleapis.com/auth/drive.file';
     
     // --- SCREEN MANAGEMENT & GLOBAL STATE ---
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function gapiLoaded() { gapi.load('client', initializeGapiClient); }
     async function initializeGapiClient() { await gapi.client.init({ discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'] }); }
     function gisLoaded() {
-        if (!GOOGLE_CLIENT_ID || GOOGLE_CLIENT_ID === 'YOUR_CLIENT_ID_GOES_HERE') { driveStatus.innerHTML = `<i class="fas fa-exclamation-triangle" style="color: #e74c3c;"></i> Google Client ID is not set.`; return; }
+        if (!GOOGLE_CLIENT_ID || GOOGLE_CLIENT_ID === 'add this google drive _CLIENT_ID_ 419426378293-661bn0b9il4bvk6k3tdr30tdhbhko0tj.apps.googleusercontent.com') { driveStatus.innerHTML = `<i class="fas fa-exclamation-triangle" style="color: #e74c3c;"></i> Google Client ID is not set.`; return; }
         tokenClient = google.accounts.oauth2.initTokenClient({ client_id: GOOGLE_CLIENT_ID, scope: DRIVE_SCOPES, callback: handleGoogleAuthResponse });
         driveAuthBtn.disabled = false;
         driveStatus.innerHTML = `<i class="fas fa-times-circle" style="color: #e74c3c;"></i> Disconnected`;
